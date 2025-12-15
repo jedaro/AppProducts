@@ -8,8 +8,8 @@ import lombok.Data;
 
 @Builder
 @Data
-@Schema(description = "Information related list of similar products")
-public class SimilarProductsResponseDTO {
+@Schema(description = "List of similar products to a given one ordered by similarity")
+public class SimilarProducts {
 
     @Schema(description = "List similar products")
     List<ProductDetailDTO> similarProducts;
