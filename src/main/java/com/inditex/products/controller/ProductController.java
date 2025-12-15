@@ -31,7 +31,7 @@ public class ProductController {
 
         log.info("Calling controller: {}", this.getClass().getName());
         SimilarProductsResponseDTO  responseDTO = SimilarProductsResponseDTO.builder()
-                .productDetailDTOs(List.of(ProductDetailDTO.builder()
+                .similarProducts(List.of(ProductDetailDTO.builder()
                         .id("4")
                         .name("Boots")
                         .price(39.99)

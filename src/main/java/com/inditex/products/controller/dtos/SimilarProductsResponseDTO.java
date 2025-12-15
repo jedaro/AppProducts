@@ -12,5 +12,5 @@ import lombok.Data;
 public class SimilarProductsResponseDTO {
 
     @Schema(description = "List similar products")
-    List<ProductDetailDTO> productDetailDTOs;
+    List<ProductDetailDTO> similarProducts;
 }
