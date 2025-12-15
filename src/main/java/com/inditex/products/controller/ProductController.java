@@ -23,7 +23,7 @@ import java.util.List;
 public class ProductController {
 
     private IProductService iProductService;
-    private ProductMapper mapper;
+    //private ProductMapper mapper;
 
     
     @GetMapping("/product/{productId}/similar")
