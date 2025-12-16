@@ -1,13 +1,13 @@
-package com.inditex.products.controller.dtos;
+package com.inditex.products.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
+@Getter
 @Builder
-@Data
 @Schema(description = "Information related detail product")
-public class ProductDetailDTO {
+public class ProductDetail {
 
     @Schema(description = "Product id")
     private String id;
@@ -20,4 +20,9 @@ public class ProductDetailDTO {
 
     @Schema(description = "Flag related if product is available")
     private Boolean availability;
+
+    public ProductDetail(){
+        super();
+    }
+
 }
