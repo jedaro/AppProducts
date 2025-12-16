@@ -2,7 +2,6 @@ package com.inditex.products.mockAPI.impl;
 
 import com.inditex.products.mockAPI.IMockAPIClient;
 import com.inditex.products.model.ProductDetail;
-import com.inditex.products.model.SimilarProductId;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

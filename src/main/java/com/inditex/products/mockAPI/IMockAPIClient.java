@@ -1,7 +1,6 @@
 package com.inditex.products.mockAPI;
 
 import com.inditex.products.model.ProductDetail;
-import com.inditex.products.model.SimilarProductId;
 
 import java.util.List;
 

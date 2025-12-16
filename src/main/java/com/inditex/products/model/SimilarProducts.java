@@ -1,4 +1,4 @@
-package com.inditex.products.controller.dtos;
+package com.inditex.products.model;
 
 import java.util.List;
 
@@ -12,5 +12,5 @@ import lombok.Data;
 public class SimilarProducts {
 
     @Schema(description = "List similar products")
-    List<ProductDetailDTO> similarProducts;
+    List<ProductDetail> similarProducts;
 }
