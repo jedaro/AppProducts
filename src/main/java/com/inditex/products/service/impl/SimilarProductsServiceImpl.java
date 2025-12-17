@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -24,12 +25,18 @@ public class SimilarProductsServiceImpl implements ISimilarProductsService {
             log.info("Calling mock api client: {}", iMockAPIClient.getClass().getName());
 
             List<String> similarProductIds = iMockAPIClient.getSimilarProductIds(productId);
+            List<ProductDetail> productDetailList = new ArrayList<>();
+
+            similarProductIds.forEach(id -> {
+                ProductDetail product = iMockAPIClient.getProductById(id);
+                productDetailList.add(product);
+            });
 
 
-            ProductDetail product = iMockAPIClient.getProductById(productId);
+            return productDetailList;
 
-            return List.of(product);
         }catch (Exception e){
+            log.debug("Error SimilarProductsServiceImpl: {}", e.getMessage());
             throw new ProductNotFoundException("Similar Product Ids fot found");
         }
     }
