@@ -1,11 +1,11 @@
 package com.inditex.products.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 
 @Getter
 @Builder
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Schema(description = "Information related detail product")
 public class ProductDetail {
 
@@ -21,8 +21,7 @@ public class ProductDetail {
     @Schema(description = "Flag related if product is available")
     private Boolean availability;
 
-    public ProductDetail(){
+    public ProductDetail() {
         super();
     }
-
 }
