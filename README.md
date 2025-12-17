@@ -36,8 +36,9 @@ Dado un `productId`, la API retorna una lista de productos similares, incluyendo
 
 `GET http://localhost:5000/product/1/similar`
 
-#### Ejemplo de Request
-`{
+#### Ejemplo de Response
+
+```{
     "similarProducts": [
         {
             "availability": true,
@@ -58,7 +59,7 @@ Dado un `productId`, la API retorna una lista de productos similares, incluyendo
             "price": 39.99
         }
     ]
-}`
+}```
 
 ### Configuracion local
 ```
