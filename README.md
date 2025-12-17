@@ -38,7 +38,8 @@ Dado un `productId`, la API retorna una lista de productos similares, incluyendo
 
 #### Ejemplo de Response
 
-```{
+```
+{
     "similarProducts": [
         {
             "availability": true,
@@ -59,7 +60,8 @@ Dado un `productId`, la API retorna una lista de productos similares, incluyendo
             "price": 39.99
         }
     ]
-}```
+}
+```
 
 ### Configuracion local
 ```
