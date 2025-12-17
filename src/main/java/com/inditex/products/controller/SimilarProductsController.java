@@ -42,8 +42,7 @@ public class SimilarProductsController {
                             responseCode = "404",
                             description = "Product Not found",
                             content = @Content(
-                                    mediaType = MediaType.APPLICATION_JSON_VALUE,
-                                    schema = @Schema(implementation = ProductNotFoundException.class)
+                                    mediaType = MediaType.APPLICATION_JSON_VALUE
                             )
                     )
 
