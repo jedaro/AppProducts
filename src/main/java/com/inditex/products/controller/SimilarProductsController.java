@@ -12,7 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.inditex.products.model.SimilarProducts;
-import com.inditex.products.service.IProductService;
+import com.inditex.products.service.ISimilarProductsService;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,9 +22,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RestController
 @RequiredArgsConstructor
 @Slf4j
-public class ProductController {
+public class SimilarProductsController {
 
-    private final IProductService iProductService;
+    private final ISimilarProductsService iSimilarProductsService;
 
     @Operation(
             summary = "Get similar products",
@@ -56,7 +56,8 @@ public class ProductController {
 
         log.info("Calling controller: {}", this.getClass().getName());
 
-        SimilarProducts responseDTO = SimilarProducts.builder().similarProducts(iProductService.getSimilarProducts(productId)).build();
+        SimilarProducts responseDTO = SimilarProducts.builder().similarProducts(iSimilarProductsService.getSimilarProducts(productId)).build();
+
         return ResponseEntity.status(HttpStatus.OK).body(responseDTO);
     }
 

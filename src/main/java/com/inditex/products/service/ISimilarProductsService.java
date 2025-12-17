@@ -4,7 +4,7 @@ import com.inditex.products.model.ProductDetail;
 
 import java.util.List;
 
-public interface IProductService {
+public interface ISimilarProductsService {
 
     /**
      * Retrieves list similar products
