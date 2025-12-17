@@ -1,6 +1,5 @@
 package com.inditex.products.controller;
 
-import com.inditex.products.exception.ProductNotFoundException;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -51,7 +50,7 @@ public class SimilarProductsController {
 
     )
     @GetMapping("/product/{productId}/similar")
-    public ResponseEntity<SimilarProducts> getProductSimilar(@PathVariable(value = "productId", required = true) String productId){
+    public ResponseEntity<SimilarProducts> getSimilarProducts(@PathVariable(value = "productId", required = true) String productId){
 
         log.info("Calling controller: {}", this.getClass().getName());
 
