@@ -17,20 +17,11 @@ public class SimilarProductExceptionHandler {
 
     @Value("${msg.error.404}")
     private  String MSG_ERROR_NOT_FOUND;
-    @Value("${msg.error.500}")
-    private  String MSG_ERROR_INTERNAL_SERVICE_ERROR;
 
     @ExceptionHandler(value = ProductNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<Object> handleProductNotFoundException(final ProductNotFoundException ex) {
         log.debug(ex.getMessage());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(MSG_ERROR_NOT_FOUND);
-    }
-
-    @ExceptionHandler(value = ProductException.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public ResponseEntity<Object> handleProductException(final ProductException ex) {
-        log.debug(ex.getMessage());
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(MSG_ERROR_INTERNAL_SERVICE_ERROR);
     }
 }
