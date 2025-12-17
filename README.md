@@ -76,9 +76,15 @@ mvn spring-boot:run
 java -jar target/AppProducts-0.0.1-SNAPSHOT.jar
 
 ```
-### Acceso app
+
+### Acceso rest app
 ```
  http://localhost:5000/product/{productId}/similar
+```
+
+### Documentación API
+```
+ http://localhost:5000/api-docs
 ```
 
 
