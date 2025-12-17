@@ -28,7 +28,7 @@ public class SimilarProductsController {
 
     @Operation(
             summary = "Get similar products",
-            operationId = "get-product-similar",
+            tags = {"get-product-similar"},
             responses = {
                     @ApiResponse(
                             responseCode = "200",
@@ -52,7 +52,7 @@ public class SimilarProductsController {
 
     )
     @GetMapping("/product/{productId}/similar")
-    public ResponseEntity<SimilarProducts> getSimilarProduct(@PathVariable(value = "productId", required = true) String productId){
+    public ResponseEntity<SimilarProducts> getProductSimilar(@PathVariable(value = "productId", required = true) String productId){
 
         log.info("Calling controller: {}", this.getClass().getName());
 
